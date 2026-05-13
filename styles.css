@@ -135,7 +135,7 @@ body {
     width: 145px;
     height: 30px;
     padding-bottom: 2px;
-    background: var(--teal);
+    background: var(--orange);
     color: white;
 }
 
@@ -362,8 +362,8 @@ input[type="number"] {
 }
 
 .disclaimer {
-    font-size: 0.875rem;
-    font-weight: 500;
+    font-size: 16px;
+    font-weight: 400;
     line-height: 1;
     text-align: center;
     padding-top: 0;
@@ -372,8 +372,9 @@ input[type="number"] {
 }
 
 .disclaimer a {
-    color: var(--teal-accent);
+    color: var(--orange);
     text-decoration: none;
+    font-weight: 500;
 }
 
 /* CUSTOM SELECT (DIV/UL) STYLING */
