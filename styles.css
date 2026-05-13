@@ -677,8 +677,8 @@ input[type="number"] {
   color: #fff;
   font-size: 1.05rem;
   font-weight: 700;
-  margin-top: 30px;
-  margin-bottom: 1rem;
+  margin-top: 0;
+  margin-bottom: 30px;
   transition:
     transform 0.2s,
     box-shadow 0.2s,
@@ -695,8 +695,8 @@ input[type="number"] {
 }
 
 hr.divisor {
-  margin-top: 30px;
-  margin-bottom: 0;
+  margin-top: 20px;
+  margin-bottom: 20px;
   margin-left: -2px;
   border: none;
   border-top: 2px dotted #aaa;
