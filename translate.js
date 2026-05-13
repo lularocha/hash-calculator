@@ -50,7 +50,7 @@ const translations = {
       "Results are calculated based on 732 hours of monthly operation (annual average).",
 
     footer:
-      'developed by Lula Rocha / <a href="https://sugiro.ai/">sugiro.ai</a>',
+      'developed by Lula Rocha / <a href="https://sugiro.ai/" target="_blank">sugiro.ai</a>',
   },
   pt: {
     Calculator: "Calculadora",
@@ -103,7 +103,7 @@ const translations = {
       "Os resultados são calculados com base em 732 horas de operação mensal (média anual).",
 
     footer:
-      'desenvolvido por Lula Rocha / <a href="https://sugiro.ai/">sugiro.ai</a>',
+      'desenvolvido por Lula Rocha / <a href="https://sugiro.ai/" target="_blank">sugiro.ai</a>',
   },
 };
 
