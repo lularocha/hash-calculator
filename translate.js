@@ -54,7 +54,7 @@ const translations = {
   },
   pt: {
     Calculator: "Calculadora",
-    "Miner examples": "Mineradores",
+    "Miner examples": "Compare mineradores",
     Miner: "Minerador",
 
     Hashrate: "Hashrate",
