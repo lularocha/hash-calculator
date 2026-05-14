@@ -105,7 +105,6 @@ body {
 /* Header Buttons */
 
 .btn {
-    height: 33px;
     background-color: var(--teal);
     border: 0;
     border-radius: 7px;
@@ -119,11 +118,7 @@ body {
         background-color 0.2s;
     z-index: 1000;
     color: #fff;
-    font-size: 14px;
     font-weight: 900;
-    padding-bottom: 0;
-    padding-left: 0.5rem;
-    padding-right: 0.5rem;
 }
 
 .btn:hover {
@@ -131,33 +126,35 @@ body {
     color: #fff;
 }
 
-.modal-trigger {
-    width: 145px;
-    height: 30px;
-    padding-bottom: 2px;
-    background: var(--orange);
-    color: white;
-}
-
 .header-btn {
     margin-top: 5px;
-}
-
-.header-lang-btn {
     display: flex;
-    justify-content: space-between;
-    margin-top: 9px;
     gap: 8px;
+    align-items: center;
 }
 
-.lang-btn {
-    width: 100%;
-    height: 28px;
+/* Circle buttons for EN, PT, and Help */
+.circle-btn {
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    font-size: 14px;
+    padding: 0;
 }
 
-.lang-btn.active {
+.circle-btn.active {
     background-color: var(--teal-accent);
     color: #fff;
+}
+
+.btn-help {
+    background-color: var(--orange);
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.btn-help:hover {
+    background-color: var(--hover);
 }
 
 .miner-select-group {
@@ -681,7 +678,7 @@ input[type="number"] {
 
 /* Help Modal Trigger Button */
 
-.modal-help-btn {
+.miner-examples-btn {
     width: 100%;
     height: 40px;
     background-color: var(--orange);
@@ -699,12 +696,12 @@ input[type="number"] {
         background-color 0.2s;
 }
 
-.modal-help-btn:hover {
+.miner-examples-btn:hover {
     background-color: var(--hover);
     color: #fff;
 }
 
-.modal-help-btn:active {
+.miner-examples-btn:active {
     transform: translateY(0);
 }
 

@@ -146,10 +146,12 @@ window.translatePage = function (lang) {
   }
 
   // 4. Update button states
-  document.querySelectorAll(".lang-btn").forEach((btn) => {
+  document.querySelectorAll(".circle-btn[data-lang]").forEach((btn) => {
     btn.classList.remove("active");
   });
-  document.querySelector(`[data-lang="${lang}"]`).classList.add("active");
+  document
+    .querySelector(`.circle-btn[data-lang="${lang}"]`)
+    .classList.add("active");
 
   // 5. Save preference
   localStorage.setItem("preferredLang", lang);

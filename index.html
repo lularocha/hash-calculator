@@ -128,27 +128,22 @@
 
                 <div class="header-btn">
                     <button
-                        id="modalTrigger"
-                        class="modal-trigger btn"
-                        aria-label="Miner Specifications Information"
+                        id="btnEN"
+                        class="circle-btn btn active"
+                        data-lang="en"
                     >
-                        <span data-translate="Miner examples"
-                            >Miner examples</span
-                        >
+                        EN
                     </button>
-
-                    <div class="header-lang-btn">
-                        <button
-                            id="btnEN"
-                            class="lang-btn btn active"
-                            data-lang="en"
-                        >
-                            EN
-                        </button>
-                        <button id="btnPT" class="lang-btn btn" data-lang="pt">
-                            PT
-                        </button>
-                    </div>
+                    <button id="btnPT" class="circle-btn btn" data-lang="pt">
+                        PT
+                    </button>
+                    <button
+                        id="helpTrigger"
+                        class="circle-btn btn btn-help"
+                        aria-label="Help and Information"
+                    >
+                        ?
+                    </button>
                 </div>
             </div>
 
@@ -305,10 +300,11 @@
                     <hr class="divisor" />
 
                     <button
-                        class="modal-help-btn"
-                        data-translate="Modal help Button"
+                        id="modalTrigger"
+                        class="miner-examples-btn btn"
+                        data-translate="Miner examples"
                     >
-                        More info
+                        Compare miners
                     </button>
 
                     <p class="disclaimer" data-translate="footer">
