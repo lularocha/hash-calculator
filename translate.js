@@ -13,14 +13,14 @@ const translations = {
     "Power consumption in Watts": "Power consumption in Watts",
     "Consumption W": "Consumption W",
 
-    Efficiency: "Efficiency ~",
+    Efficiency: "Efficiency",
     "Joules per Terahash, the lower the better":
       "Joules per Terahash, the lower the better",
 
     Tariff: "Enter your local tariff",
     "tariff-helper":
       "The value above is the estimated tariff in Rio de Janeiro",
-    Results: "Results/month",
+    Results: "Per month",
     "Monthly consumption:": "Consumption:",
     "Estimated cost:": "Estimated cost:",
 
@@ -65,13 +65,13 @@ const translations = {
     "Power consumption in Watts": "Consumo de energia em Watts",
     "Consumption W": "Consumo W",
 
-    Efficiency: "Eficiência ~",
+    Efficiency: "Eficiência",
     "Joules per Terahash, the lower the better":
       "Joules por Terahash, o menor é o melhor",
 
     Tariff: "Insira sua tarifa local",
     "tariff-helper": "R$ 0,90/kWh é a tarifa estimada no Rio de Janeiro",
-    Results: "Resultados/mês",
+    Results: "Por mês",
     "Monthly consumption:": "Consumo:",
     "Estimated cost:": "Custo estimado:",
 
