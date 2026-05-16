@@ -685,7 +685,7 @@ input[type="number"] {
     display: block;
     text-align: center;
     color: var(--orange);
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     font-weight: 600;
     cursor: pointer;
     text-decoration: none;
