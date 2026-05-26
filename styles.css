@@ -20,31 +20,21 @@
     box-sizing: border-box;
 }
 
-html {
-    overflow: hidden;
-    height: 100%;
-}
-
 body {
     font-family: var(--font-sans);
     background-color: var(--bg-color);
-    overflow: hidden;
-    height: 100%;
+    overflow-x: hidden;
     border-top: 9px solid var(--teal);
 }
 
-.app-body {
-    background-color: var(--bg-color);
-    height: 100%;
+main {
     display: flex;
     justify-content: center;
-    overflow-y: auto;
-    overflow-x: hidden;
+    min-height: 100vh;
 }
 
 @media (min-width: 768px) {
-    .app-body {
-        height: auto;
+    main {
         min-height: 90vh;
         margin-top: 20px;
     }
