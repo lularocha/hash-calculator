@@ -27,11 +27,16 @@ body {
     border-top: 9px solid var(--teal);
 }
 
+html, body {
+    min-height: 100%;
+}
+
 main {
     margin: 0 auto;
     width: 100%;
     max-width: 32rem;
     min-height: 100vh;
+    min-height: 100svh;
     position: relative;
     padding-bottom: 60px;
 }
@@ -39,6 +44,7 @@ main {
 @media (min-width: 768px) {
     main {
         min-height: 90vh;
+        min-height: 90svh;
         margin-top: 20px;
     }
 }
