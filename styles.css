@@ -28,9 +28,12 @@ body {
 }
 
 main {
-    display: flex;
-    justify-content: center;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 32rem;
     min-height: 100vh;
+    position: relative;
+    padding-bottom: 60px;
 }
 
 @media (min-width: 768px) {
@@ -40,21 +43,7 @@ main {
     }
 }
 
-/* Card and Header */
-.card {
-    background-color: var(--bg-color);
-    border-radius: 0.75rem;
-    width: 100%;
-    max-width: 32rem;
-    position: relative;
-    padding-bottom: 60px;
-}
-
-@media (max-width: 600px) {
-    .card {
-        border-radius: 0;
-    }
-}
+/* Header */
 
 .header-content {
     background: var(--bg-color);
