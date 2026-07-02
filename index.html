@@ -1,333 +1,311 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="theme-color" content="#002736" />
-        <meta name="mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-title" content="Hash Cost" />
-        <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-        <title>sugiro.ai hashcost calculator</title>
-        <link rel="manifest" href="./site.webmanifest" />
-        <link rel="stylesheet" type="text/css" href="styles.css" />
-        <link rel="icon" href="./favicon.ico" sizes="any" />
-        <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-        <link
-            rel="apple-touch-icon"
-            sizes="180x180"
-            href="./apple-touch-icon.png"
-        />
-    </head>
-    <body>
-        <div id="modal" class="modal">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h2 data-translate="Miner examples">Miner examples</h2>
-                    <button id="closeModal" class="modal-close">&times;</button>
-                </div>
-                <div class="modal-body">
-                    <table class="miner-table">
-                        <thead>
-                            <tr>
-                                <th data-translate="Miner">Miner</th>
-                                <th>TH/s</th>
-                                <th>Watts</th>
-                                <th>J/TH</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>Bitaxe Gamma 601</td>
-                                <td>1.2</td>
-                                <td>17</td>
-                                <td>15</td>
-                            </tr>
-                            <tr>
-                                <td>NerdQaxe++</td>
-                                <td>4.8</td>
-                                <td>72</td>
-                                <td>15</td>
-                            </tr>
-                            <tr>
-                                <td>Avalon Nano 3S</td>
-                                <td>6</td>
-                                <td>140</td>
-                                <td>23</td>
-                            </tr>
-                            <tr>
-                                <td>Antminer S19</td>
-                                <td>95</td>
-                                <td>3250</td>
-                                <td>34</td>
-                            </tr>
-                            <tr>
-                                <td>Antminer S21</td>
-                                <td>200</td>
-                                <td>3500</td>
-                                <td>18</td>
-                            </tr>
-                            <tr>
-                                <td>Antminer S23</td>
-                                <td>318</td>
-                                <td>3500</td>
-                                <td>11</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#002736" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Hash Cost" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <title>sugiro.ai hashcost calculator</title>
+    <link rel="manifest" href="./site.webmanifest" />
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link rel="icon" href="./favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./apple-touch-icon.png"
+    />
+  </head>
+  <body>
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 data-translate="Miner examples">Miner examples</h2>
+          <button id="closeModal" class="modal-close">&times;</button>
         </div>
+        <div class="modal-body">
+          <table class="miner-table">
+            <thead>
+              <tr>
+                <th data-translate="Miner">Miner</th>
+                <th>TH/s</th>
+                <th>Watts</th>
+                <th>J/TH</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Bitaxe Gamma 601</td>
+                <td>1.2</td>
+                <td>17</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>NerdQaxe++</td>
+                <td>4.8</td>
+                <td>72</td>
+                <td>15</td>
+              </tr>
+              <tr>
+                <td>Avalon Nano 3S</td>
+                <td>6</td>
+                <td>140</td>
+                <td>23</td>
+              </tr>
+              <tr>
+                <td>Antminer S19</td>
+                <td>95</td>
+                <td>3250</td>
+                <td>34</td>
+              </tr>
+              <tr>
+                <td>Antminer S21</td>
+                <td>200</td>
+                <td>3500</td>
+                <td>18</td>
+              </tr>
+              <tr>
+                <td>Antminer S23</td>
+                <td>318</td>
+                <td>3500</td>
+                <td>11</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
 
-        <!-- Help Modal -->
-        <div id="modal-help" class="modal-help">
-            <div class="modal-content">
-                <div class="modal-header-help">
-                    <h2
-                        class="modal-help-title"
-                        data-translate="Modal help title"
-                    >
-                        More info
-                    </h2>
-                    <button id="closeHelpModal" class="modal-close">
-                        &times;
-                    </button>
-                </div>
-                <div class="modal-body-help">
-                    <ul>
-                        <li data-translate="Modal help 00">
-                            Choose language (EN/PT). English shows cost in
-                            dollars and Portuguese in Brazilian Reais.
-                        </li>
-                        <li data-translate="Modal help 01">
-                            Select a Miner to automatically set Hashrate, Power
-                            and Efficiency values. You can also tap any field to
-                            enter your values manually
-                        </li>
-                        <li data-translate="Modal help 02">
-                            My values are approximated. Check manufacturer's
-                            specification for precise values
-                        </li>
-                        <li data-translate="Modal help 03">
-                            Efficiency formula: Joules/Terahash (J/TH) = Watts ÷
-                            TH/s
-                        </li>
-                        <li data-translate="Modal help 04">
-                            Check your electricity bill for your local tariff
-                            with taxes.
-                        </li>
-                        <li data-translate="Modal help 05">
-                            Results are calculated based on 732 hours of monthly
-                            operation (annual average)
-                        </li>
-                    </ul>
-                </div>
-            </div>
+    <!-- Help Modal -->
+    <div id="modal-help" class="modal-help">
+      <div class="modal-content">
+        <div class="modal-header-help">
+          <h2 class="modal-help-title" data-translate="Modal help title">
+            More info
+          </h2>
+          <button id="closeHelpModal" class="modal-close">&times;</button>
         </div>
+        <div class="modal-body-help">
+          <ul>
+            <li data-translate="Modal help 00">
+              Choose language (EN/PT). English shows cost in dollars and
+              Portuguese in Brazilian Reais.
+            </li>
+            <li data-translate="Modal help 01">
+              Select a Miner to automatically set Hashrate, Power and Efficiency
+              values. You can also tap any field to enter your values manually
+            </li>
+            <li data-translate="Modal help 02">
+              My values are approximated. Check manufacturer's specification for
+              precise values
+            </li>
+            <li data-translate="Modal help 03">
+              Efficiency formula: Joules/Terahash (J/TH) = Watts ÷ TH/s
+            </li>
+            <li data-translate="Modal help 04">
+              Check your electricity bill for your local tariff with taxes.
+            </li>
+            <li data-translate="Modal help 05">
+              Results are calculated based on 732 hours of monthly operation
+              (annual average)
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
 
     <main>
-        <div class="header-content">
-                <div class="header-title">
-                    <p class="sugiro-logo">
-                        <a href="https://sugiro.io/">sugiro.ai</a>
-                    </p>
-                    <h1 class="main-title">HASHCOST</h1>
-                    <h2 class="subtitle" data-translate="Calculator">
-                        Calculator
-                    </h2>
-                </div>
+      <div class="header-content">
+        <div class="header-title">
+          <p class="sugiro-logo">
+            <a href="https://sugiro.io/">sugiro.ai</a>
+          </p>
+          <h1 class="main-title">HASHCOST</h1>
+          <h2 class="subtitle" data-translate="Calculator">Calculator</h2>
+        </div>
 
-                <div class="header-btn">
-                    <button
-                        id="btnEN"
-                        class="circle-btn btn active"
-                        data-lang="en"
-                    >
-                        EN
-                    </button>
-                    <button id="btnPT" class="circle-btn btn" data-lang="pt">
-                        BR
-                    </button>
-                    <button
-                        id="helpTrigger"
-                        class="circle-btn btn btn-help"
-                        aria-label="Help and Information"
-                    >
-                        ?
-                    </button>
+        <div class="header-btn">
+          <button id="btnEN" class="circle-btn btn active" data-lang="en">
+            EN
+          </button>
+          <button id="btnPT" class="circle-btn btn" data-lang="pt">BR</button>
+          <button
+            id="helpTrigger"
+            class="circle-btn btn btn-help"
+            aria-label="Help and Information"
+          >
+            ?
+          </button>
+        </div>
+      </div>
+
+      <div class="main-body">
+        <div class="miner-select-group">
+          <label
+            for="custom-select"
+            class="input-label"
+            data-translate="Select miner"
+          >
+            Select miner
+          </label>
+          <div class="custom-select-wrapper">
+            <div
+              id="custom-select"
+              class="custom-select-trigger input-field"
+              data-value="0"
+            ></div>
+            <div id="custom-options" class="custom-options"></div>
+          </div>
+          <!-- <p class="input-helper" data-translate="Select miner to set values">Select to automatically set Hashrate and Efficiency bellow</p> -->
+        </div>
+
+        <div class="content-section">
+          <div class="input-row-3col">
+            <div class="input-group">
+              <label
+                for="terahash"
+                class="input-label"
+                data-translate="Hashrate"
+              >
+                Hashrate
+              </label>
+              <div class="input-field-group">
+                <input
+                  type="number"
+                  id="terahash"
+                  value="100"
+                  min="0"
+                  step="1"
+                  class="input-field"
+                  oninput="handleInputChange('terahash')"
+                />
+                <div class="input-unit">
+                  <span>TH/s</span>
                 </div>
+              </div>
             </div>
 
-            <div class="miner-select-group">
-                <label
-                    for="custom-select"
-                    class="input-label"
-                    data-translate="Select miner"
-                >
-                    Select miner
-                </label>
-                <div class="custom-select-wrapper">
-                    <div
-                        id="custom-select"
-                        class="custom-select-trigger input-field"
-                        data-value="0"
-                    ></div>
-                    <div id="custom-options" class="custom-options"></div>
+            <div class="input-group">
+              <label
+                for="consumption"
+                class="input-label"
+                data-translate="Consumption"
+              >
+                Power
+              </label>
+              <div class="input-field-group">
+                <input
+                  type="number"
+                  id="consumption"
+                  value="3000"
+                  min="1"
+                  step="1"
+                  class="input-field"
+                  oninput="handleInputChange('consumption')"
+                />
+                <div class="input-unit">
+                  <span>W</span>
                 </div>
-                <!-- <p class="input-helper" data-translate="Select miner to set values">Select to automatically set Hashrate and Efficiency bellow</p> -->
+              </div>
             </div>
 
-            <div class="content-section">
-                <div class="input-row-3col">
-                    <div class="input-group">
-                        <label
-                            for="terahash"
-                            class="input-label"
-                            data-translate="Hashrate"
-                        >
-                            Hashrate
-                        </label>
-                        <div class="input-field-group">
-                            <input
-                                type="number"
-                                id="terahash"
-                                value="100"
-                                min="0"
-                                step="1"
-                                class="input-field"
-                                oninput="handleInputChange('terahash')"
-                            />
-                            <div class="input-unit">
-                                <span>TH/s</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input-group">
-                        <label
-                            for="consumption"
-                            class="input-label"
-                            data-translate="Consumption"
-                        >
-                            Power
-                        </label>
-                        <div class="input-field-group">
-                            <input
-                                type="number"
-                                id="consumption"
-                                value="3000"
-                                min="1"
-                                step="1"
-                                class="input-field"
-                                oninput="handleInputChange('consumption')"
-                            />
-                            <div class="input-unit">
-                                <span>W</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="input-group">
-                        <label
-                            for="efficiency"
-                            class="input-label"
-                            data-translate="Efficiency"
-                        >
-                            Efficiency
-                        </label>
-                        <div class="input-field-group">
-                            <input
-                                type="number"
-                                id="efficiency"
-                                value="30"
-                                min="1"
-                                step="0.1"
-                                class="input-field"
-                                oninput="handleInputChange('efficiency')"
-                            />
-                            <div class="input-unit">
-                                <span>J/TH</span>
-                            </div>
-                        </div>
-                    </div>
+            <div class="input-group">
+              <label
+                for="efficiency"
+                class="input-label"
+                data-translate="Efficiency"
+              >
+                Efficiency
+              </label>
+              <div class="input-field-group">
+                <input
+                  type="number"
+                  id="efficiency"
+                  value="30"
+                  min="1"
+                  step="0.1"
+                  class="input-field"
+                  oninput="handleInputChange('efficiency')"
+                />
+                <div class="input-unit">
+                  <span>J/TH</span>
                 </div>
-
-                <div class="input-group">
-                    <label
-                        for="price"
-                        class="input-label"
-                        data-translate="Tariff"
-                    >
-                        Tariff
-                    </label>
-                    <div class="input-field-group tariff-group">
-                        <div id="currency-prefix" class="input-prefix">
-                            <span>R$</span>
-                        </div>
-                        <input
-                            type="text"
-                            id="price"
-                            value="0.90"
-                            class="input-field input-field-price"
-                            data-brl-value="0.90"
-                            oninput="calculateCost()"
-                        />
-                        <div class="input-unit">
-                            <span>/kWh</span>
-                        </div>
-                    </div>
-                    <p class="input-helper" data-translate="tariff-helper">
-                        R$ 0.90/kWh estimated in Rio de Janeiro, tax included
-                    </p>
-                </div>
-
-                <div class="results-section">
-                    <h2 class="results-title" data-translate="Results">
-                        Results/month
-                    </h2>
-
-                    <div class="result-box-neutral">
-                        <span
-                            class="result-label"
-                            data-translate="Monthly consumption:"
-                            >Monthly consumption:</span
-                        >
-                        <span id="monthly_kwh" class="result-value-neutral"
-                            >0.00 kWh</span
-                        >
-                    </div>
-
-                    <div class="result-box-highlight">
-                        <span
-                            class="result-label-highlight"
-                            data-translate="Estimated cost:"
-                            >Estimated cost:</span
-                        >
-                        <span id="monthly_cost" class="result-value-highlight"
-                            >R$ 0.00</span
-                        >
-                    </div>
-
-                    <span
-                        id="modalTrigger"
-                        class="miner-examples-link"
-                        data-translate="Miner examples"
-                    >
-                        Compare miners
-                    </span>
-
-                    <p class="footer-text" data-translate="footer">
-                        developed by Lula Rocha /
-                        <a href="https://sugiro.ai/" target="_blank"
-                            >sugiro.ai</a
-                        >
-                    </p>
-                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="input-group">
+            <label for="price" class="input-label" data-translate="Tariff">
+              Tariff
+            </label>
+            <div class="input-field-group tariff-group">
+              <div id="currency-prefix" class="input-prefix">
+                <span>R$</span>
+              </div>
+              <input
+                type="text"
+                id="price"
+                value="0.90"
+                class="input-field input-field-price"
+                data-brl-value="0.90"
+                oninput="calculateCost()"
+              />
+              <div class="input-unit">
+                <span>/kWh</span>
+              </div>
+            </div>
+            <p class="input-helper" data-translate="tariff-helper">
+              R$ 0.90/kWh estimated in Rio de Janeiro, tax included
+            </p>
+          </div>
+
+          <div class="results-section">
+            <h2 class="results-title" data-translate="Results">
+              Results/month
+            </h2>
+
+            <div class="result-box-neutral">
+              <span class="result-label" data-translate="Monthly consumption:"
+                >Monthly consumption:</span
+              >
+              <span id="monthly_kwh" class="result-value-neutral"
+                >0.00 kWh</span
+              >
+            </div>
+
+            <div class="result-box-highlight">
+              <span
+                class="result-label-highlight"
+                data-translate="Estimated cost:"
+                >Estimated cost:</span
+              >
+              <span id="monthly_cost" class="result-value-highlight"
+                >R$ 0.00</span
+              >
+            </div>
+
+            <span
+              id="modalTrigger"
+              class="miner-examples-link"
+              data-translate="Miner examples"
+            >
+              Compare miners
+            </span>
+
+            <p class="footer-text" data-translate="footer">
+              developed by Lula Rocha /
+              <a href="https://sugiro.ai/" target="_blank">sugiro.ai</a>
+            </p>
+          </div>
+        </div>
+      </div>
     </main>
 
-        <script src="modal.js"></script>
-        <script src="menu.js"></script>
-        <script src="translate.js"></script>
-    </body>
+    <script src="modal.js"></script>
+    <script src="menu.js"></script>
+    <script src="translate.js"></script>
+  </body>
 </html>
